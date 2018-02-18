@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% for webtoon in webtoons %}
+        <div>
+            <h2>
+                <a href="{% url 'webtoon-detail' webtoon.pk %}">
+                    {{ webtoon.title }} (id = {{ webtoon.webtoon_id}})<br>
+                </a>
+            </h2>
+        </div>
+
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+<h3>{{ webtoon.title }}</h3>
+
+{% block content %}
+    {% for episode in webtoon.episode_set.all %}
+        <div>{{ webtoon.title }}  {{ episode.title }}</div>
+    {% endfor %}
+{% endblock %}
